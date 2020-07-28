@@ -1,6 +1,8 @@
 import React from 'react'
-import EagleLogo from './EagleLogo.jpg'
+import EagleLogo from './EagleLogo.js'
 import styled from 'styled-components'
+import { useSelector } from 'react-redux'
+import { darkGrey, lightGreen } from '../../constants/constants'
 
 const Image = styled.div`
   display: flex;
@@ -13,14 +15,14 @@ const Image = styled.div`
 const LogedInName = styled.span`
   padding: 20px;
   font-size: 25px;
-  font-family: 'Lato', sans-serif;
 `
 
 const Logo = () => {
+  const { theme } = useSelector(store => store.Theme)
   return (
     <Image>
       <LogedInName>Francisco Carmona</LogedInName>
-      <img src={EagleLogo} alt="eagleLogo" />
+      <EagleLogo size={80} color={theme === 'dark' ? lightGreen : darkGrey} />
     </Image>
   )
 }

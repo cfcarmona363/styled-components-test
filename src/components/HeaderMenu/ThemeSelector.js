@@ -14,7 +14,6 @@ const SwitchSelector = styled.div`
   justify-content: space-evenly;
   cursor: pointer;
   span {
-    padding: 2px 0 0 0;
     transform: ${({ theme }) => (theme === 'dark' ? 'translateX(0)' : 'translateX(-120%)')};
     transition: transform 0.3s ease-in-out;
   }

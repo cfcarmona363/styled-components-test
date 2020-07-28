@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
-import Home from './containers/Home'
+import HomePage from './Pages/HomePage'
+import ButtonsPage from './Pages/ButtonsPage'
+import NavBar from './components/HeaderMenu/NavBar'
+import { PageContainer } from './styledComponents/StyledContainers'
+import { MenuContext } from './context/menuContext'
 
 const Router = () => {
-return (
-      <BrowserRouter>
+  const { isOpen, setIsOpen } = useContext(MenuContext)
+  const openCloseMenu = () => {
+    if (isOpen) setIsOpen(false)
+  }
+
+  return (
+    <BrowserRouter>
+      <NavBar />
+      <PageContainer menuOpen={isOpen} onClick={openCloseMenu}>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/buttons" component={ButtonsPage} />
         </Switch>
-      </BrowserRouter>
+      </PageContainer>
+    </BrowserRouter>
   )
 }
 
-export default (Router)
+export default Router

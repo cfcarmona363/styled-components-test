@@ -2,15 +2,17 @@ import styled from 'styled-components'
 
 import { lightGreen, lightGrey, darkGrey } from '../../constants/constants'
 
-export const Header = styled.nav`
-  position: fixed;
+export const Header = styled.div`
   width: 100%;
-
   border-bottom: solid 2px ${({ theme }) => (theme === 'dark' ? lightGreen : darkGrey)};
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  background-color: inherit;
+  z-index: 100;
 `
 export const StyledBurger = styled.div`
   width: 2rem;
@@ -18,7 +20,8 @@ export const StyledBurger = styled.div`
   top: 15px;
   left: 20px;
   z-index: 20;
-  margin: 0.5rem;
+  margin: 1rem;
+  align-self: center;
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
@@ -58,7 +61,14 @@ export const StyledSideNav = styled.ul`
   top: 0;
   left: 0;
   height: 100vh;
-  width: 230px;
+  width: 200px;
   padding-top: 3.5rem;
   transition: transform 0.3s ease-in-out;
+`
+export const SideNavItem = styled.a`
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
 `
