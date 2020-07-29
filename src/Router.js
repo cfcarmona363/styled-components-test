@@ -16,7 +16,7 @@ const Router = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <PageContainer menuOpen={isOpen} onClick={openCloseMenu}>
+      <PageContainer disabled={isOpen} menuOpen={isOpen} onClick={openCloseMenu}>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/buttons" component={ButtonsPage} />

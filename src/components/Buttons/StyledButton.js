@@ -28,7 +28,6 @@ export const AnimatedButton = styled(StandardButton)`
   box-shadow: 0 2px 2px ${({ theme, type }) => buttonsColors[theme][type].shadow};
 
   &:active {
-    margin-top: 0.2em;
-    border-bottom-width: 0;
+    border-bottom: 0;
   }
 `

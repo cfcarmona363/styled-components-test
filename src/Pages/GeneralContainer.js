@@ -1,14 +1,14 @@
 import React from 'react'
-import MenuProvider from '../context/menuContext'
 import { MainContainer } from '../styledComponents/StyledContainers'
 import { useSelector } from 'react-redux'
+import Router from '../Router'
 
-const GeneralContainer = ({ children }) => {
+const GeneralContainer = () => {
   const { theme } = useSelector(store => store.Theme)
   return (
-    <MenuProvider>
-      <MainContainer theme={theme}>{children}</MainContainer>
-    </MenuProvider>
+    <MainContainer theme={theme}>
+      <Router />
+    </MainContainer>
   )
 }
 

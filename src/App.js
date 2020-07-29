@@ -2,16 +2,16 @@
 import React from 'react'
 import store from './store'
 import { Provider } from 'react-redux'
-import Router from './Router'
-import favicon from '../public/favicon.ico'
+import MenuProvider from './context/menuContext'
 import GeneralContainer from './Pages/GeneralContainer'
+import favicon from '../public/favicon.ico'
 
 const App = () => {
   return (
     <Provider store={store}>
-      <GeneralContainer>
-        <Router />
-      </GeneralContainer>
+      <MenuProvider>
+        <GeneralContainer />
+      </MenuProvider>
     </Provider>
   )
 }

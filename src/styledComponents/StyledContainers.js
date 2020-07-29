@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { lightGreen, lightGrey, darkGrey } from '../constants/constants'
 
 export const MainContainer = styled.div`
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
   margin: 0;
   padding: 0;
   position: fixed;
@@ -25,12 +25,11 @@ export const PageContainer = styled.div`
   box-sizing: border-box;
   flex: 1;
   align-self: center;
-  margin: 100px 0 50px 0;
+  padding: 100px 0 50px 0;
   width: 70%;
   filter: brightness(${({ menuOpen }) => (menuOpen ? '50%' : '100%')});
 `
 export const GridContainer = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-gap: 1rem;

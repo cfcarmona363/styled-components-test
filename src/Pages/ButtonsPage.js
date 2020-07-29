@@ -4,6 +4,7 @@ import { GridContainer } from '../styledComponents/StyledContainers'
 import { FlatButton, RaisedButton } from '../components/Buttons/Button'
 
 const ButtonsPage = () => {
+  const handleClick = () => alert('CLICK')
   return (
     <>
       <Title align="left">Buttons</Title>
@@ -30,19 +31,19 @@ const ButtonsPage = () => {
         <div>
           <Text>Classic</Text>
           <Separator size={1} />
-          <FlatButton label="Button1" type="classic" />
+          <FlatButton label="Button1" type="classic" onClick={handleClick} />
           <Separator size={2} />
         </div>
         <div>
           <Text>Primary</Text>
           <Separator size={1} />
-          <FlatButton label="Button2" type="primary" />
+          <FlatButton label="Button2" type="primary" onClick={handleClick} />
           <Separator size={2} />
         </div>
         <div>
           <Text>Danger</Text>
           <Separator size={1} />
-          <FlatButton label="Button3" type="danger" />
+          <FlatButton label="Button3" type="danger" onClick={handleClick} />
           <Separator size={2} />
         </div>
       </GridContainer>
@@ -52,19 +53,19 @@ const ButtonsPage = () => {
         <div>
           <Text>Classic</Text>
           <Separator size={1} />
-          <RaisedButton label="Button1" type="classic" />
+          <RaisedButton label="Button1" type="classic" onClick={handleClick} />
           <Separator size={2} />
         </div>
         <div>
           <Text>Primary</Text>
           <Separator size={1} />
-          <RaisedButton label="Button2" type="primary" />
+          <RaisedButton label="Button2" type="primary" onClick={handleClick} />
           <Separator size={2} />
         </div>
         <div>
           <Text>Danger</Text>
           <Separator size={1} />
-          <RaisedButton label="Button3" type="danger" />
+          <RaisedButton label="Button3" type="danger" onClick={handleClick} />
           <Separator size={2} />
         </div>
       </GridContainer>
