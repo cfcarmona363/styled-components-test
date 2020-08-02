@@ -124,7 +124,6 @@ module.exports = function (_env, argv) {
     },
     devServer: {
       port: 3000,
-      host: '192.168.0.207',
       compress: true,
       inline: true,
       hot: true,
